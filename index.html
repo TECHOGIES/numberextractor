@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Number Extractor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #1e1e2f;
+            color: white;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #2e2e40;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #ff7f50;
+        }
+        a {
+            color: #9b59b6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            margin-top: 10px;
+            background-color: #1e1e2f;
+            color: white;
+            border: 1px solid #ff7f50;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #ff7f50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #e06b41;
+        }
+        #output {
+            white-space: pre-wrap;
+            background-color: #1e1e2f;
+            border: 1px solid #9b59b6;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+            color: #f1c40f;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #ff7f50;
+        }
+        footer a {
+            color: #9b59b6;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>WhatsApp Number Extractor By TECHOGIES</h1>
+        <p>Step 1: Watch the video on YouTube for instructions, and visit our website. <a href="https://www.techogies.com" target="_blank">click here</a></p>
+        <p>Step 2: Copy and paste the code in the console as per the video instructions:</p>
+        <textarea readonly id="consoleCode">function textToClipboard(text) {
+    var dummy = document.createElement("textarea");
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);
+    alert("Copy Done");
+}
+var numbers = document.getElementsByClassName("copyable-text")[1].innerHTML;
+//var grpname = document.getElementsByClassName("_3W2ap")[0].innerText;
+//var x ='<h3>';
+//var y ='</h3>';
+//var data = x+grpname+y+numbers;
+textToClipboard(numbers);</textarea>
+        <button onclick="copyCode()">Copy Code</button>
+        <button style="background-color: #0b0101; color: rgb(255, 255, 255); border: 20px; padding: 15px 32px; text-align: center; font-size: 16px; cursor: pointer; box-shadow: 0 0 10px rgba(255, 191, 0, 0.7); transition: box-shadow 0.3s ease;" onclick="window.location.href='step3.html'">Click Here for Step 3</button>
+
+    </div>
+    <footer>
+        Uzair Sir Techogies: <a href="http://www.techogies.com" target="_blank">www.techogies.com</a>
+    </footer>
+
+    <script>
+
+        function copyCode() {
+            const consoleCode = document.getElementById('consoleCode').value;
+            const textarea = document.createElement('textarea');
+            document.body.appendChild(textarea);
+            textarea.value = consoleCode;
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('Code copied to clipboard!');
+        }
+
+        function copyNumbers() {
+            const outputText = document.getElementById('output').innerText;
+            const textarea = document.createElement('textarea');
+            document.body.appendChild(textarea);
+            textarea.value = outputText;
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('Numbers copied to clipboard!');
+        }
+    </script>
+</body>
+</html>
